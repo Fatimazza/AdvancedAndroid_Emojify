@@ -15,6 +15,7 @@
     <string name="app_name">Emojify</string>
     <string name="emojify_me">Emojify Me!</string>
     <string name="no_emoji">No Emoji Expression Found</string>
+    <string name="no_faces_message">No Faces Found</string>
     <string name="delete_success">Images was deleted!</string>
     <string name="delete_failure">Image deletion failed</string>
     <string name="saved_message">Image Saved at %1$s</string>
