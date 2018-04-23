@@ -16,6 +16,31 @@
 
 package com.example.android.emojify;
 
+import android.content.Context;
+import android.graphics.Bitmap;
+
 public class Emojifier {
+
+    /**
+     * Method for detecting faces in a bitmap.
+     *
+     * @param context The application context.
+     * @param picture The picture in which to detect the faces.
+     */
+    static void detectFaces(Context context, Bitmap picture) {
+
+        // Create the face detector, disable tracking and enable classifications
+
+        // Build the frame
+
+        // Detect the faces
+
+        // Log the number of faces
+
+        // If there are no faces detected, show a Toast message
+
+        // Release the detector
+
+    }
 
 }
