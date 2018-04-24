@@ -57,8 +57,15 @@ class Emojifier {
         if(faces.size() == 0){
             Toast.makeText(context, R.string.no_faces_message, Toast.LENGTH_SHORT).show();
         }
+        // COMPLETED (2): Iterate through the faces, calling getClassifications() for each face.
+        else {
+            for (int i = 0; i < faces.size(); i++){
+                Face face = faces.valueAt(i);
 
-        // TODO (2): Iterate through the faces, calling getClassifications() for each face.
+                // Log the classification probabilities for each face.
+                getClassifications(face);
+            }
+        }
 
         // Release the detector
         detector.release();
@@ -72,7 +79,7 @@ class Emojifier {
      * @param face The face to get the classification probabilities.
      */
 
-    private static void getClassivications(Face face) {
+    private static void getClassifications(Face face) {
         //Log all the probablities
         Log.d(LOG_TAG, "getClassifications: smilingProb = " + face.getIsSmilingProbability());
         Log.d(LOG_TAG, "getClassifications: left-eyeOpenProb = " + face.getIsLeftEyeOpenProbability());
