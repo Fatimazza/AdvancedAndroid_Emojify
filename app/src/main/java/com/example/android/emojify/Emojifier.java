@@ -94,7 +94,13 @@ class Emojifier {
         Log.d(LOG_TAG, "whichEmoji: rightEyeOpenProb = "
                 + face.getIsRightEyeOpenProbability());
 
-        // TODO (4): Create 3 boolean variables to track the state of the facial expression based on the thresholds you set in the previous step: smiling, left eye closed, right eye closed.
+        // COMPLETED (4): Create 3 boolean variables to track the state of the facial expression
+        // based on the thresholds you set in the previous step: smiling, left eye closed, right eye closed.
+
+        boolean smiling = face.getIsSmilingProbability() > SMILING_PROB_THRESHOLD;
+        boolean leftEyeClosed = face.getIsLeftEyeOpenProbability() < EYE_OPEN_PROB_THRESHOLD;
+        boolean rightEyeClosed = face.getIsRightEyeOpenProbability() < EYE_OPEN_PROB_THRESHOLD;
+
         // TODO (5): Create an if/else system that selects the appropriate emoji based on the above booleans and log the result.
     }
 
