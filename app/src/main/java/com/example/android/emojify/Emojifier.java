@@ -61,8 +61,8 @@ class Emojifier {
                 Face face = faces.valueAt(i);
 
                 // Log the classification probabilities for each face.
-                getClassifications(face);
-                // TODO (6): Change the call to getClassifications to whichEmoji() to log the appropriate emoji for the facial expression.
+                // COMPLETED (6): Change the call to getClassifications to whichEmoji() to log the appropriate emoji for the facial expression.
+                whichEmoji(face);
             }
 
         }
@@ -76,15 +76,15 @@ class Emojifier {
     /**
      * Method for logging the classification probabilities.
      *
-     * @param face The face to get the classification probabilities.
+     * @param face The face for which you pick an emoji.
      */
-    private static void getClassifications(Face face){
-        // TODO (2): Change the name of the getClassifications() method to whichEmoji() (also change the log statements)
+        // COMPLETED (2): Change the name of the getClassifications() method to whichEmoji() (also change the log statements)
+    private static void whichEmoji(Face face){
         // Log all the probabilities
-        Log.d(LOG_TAG, "getClassifications: smilingProb = " + face.getIsSmilingProbability());
-        Log.d(LOG_TAG, "getClassifications: leftEyeOpenProb = "
+        Log.d(LOG_TAG, "whichEmoji: smilingProb = " + face.getIsSmilingProbability());
+        Log.d(LOG_TAG, "whichEmoji: leftEyeOpenProb = "
                 + face.getIsLeftEyeOpenProbability());
-        Log.d(LOG_TAG, "getClassifications: rightEyeOpenProb = "
+        Log.d(LOG_TAG, "whichEmoji: rightEyeOpenProb = "
                 + face.getIsRightEyeOpenProbability());
 
         // TODO (3): Create threshold constants for a person smiling, and and eye being open by taking pictures of yourself and your friends and noting the logs.
