@@ -34,14 +34,15 @@ class Emojifier {
     private static final double EYE_OPEN_PROB_THRESHOLD = .5;
 
     /**
-     * Method for detecting faces in a bitmap.
+     * Method for detecting faces in a bitmap, and drawing emoji depending on the facial
+     * expression.
      *
      * @param context The application context.
      * @param picture The picture in which to detect the faces.
      */
-    static void detectFaces(Context context, Bitmap picture) {
+    static void detectFacesAndOverlayEmoji(Context context, Bitmap picture) {
 
-        // TODO (3): Change the name of the detectFaces() method to detectFacesAndOverlayEmoji() and the return type from void to Bitmap
+        // COMPLETED (3): Change the name of the detectFaces() method to detectFacesAndOverlayEmoji() and the return type from void to Bitmap
 
         // Create the face detector, disable tracking and enable classifications
         FaceDetector detector = new FaceDetector.Builder(context)
@@ -56,7 +57,7 @@ class Emojifier {
         SparseArray<Face> faces = detector.detect(frame);
 
         // Log the number of faces
-        Log.d(LOG_TAG, "detectFaces: number of faces = " + faces.size());
+        Log.d(LOG_TAG, "detectFacesAndOverlayEmoji: number of faces = " + faces.size());
 
         // TODO (7): Create a variable called resultBitmap and initialize it to the original picture bitmap passed into the detectFacesAndOverlayEmoji() method
         // If there are no faces detected, show a Toast message
