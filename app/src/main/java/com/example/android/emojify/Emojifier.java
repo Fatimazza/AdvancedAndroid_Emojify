@@ -91,9 +91,9 @@ class Emojifier {
      * @param face The face for which you pick an emoji.
      */
 
-    private static void whichEmoji(Face face) {
+    private static Emoji whichEmoji(Face face) {
 
-        // TODO (1): Change the return type of the whichEmoji() method from void to Emoji.
+        // COMPLETED (1): Change the return type of the whichEmoji() method from void to Emoji.
         // Log all the probabilities
         Log.d(LOG_TAG, "whichEmoji: smilingProb = " + face.getIsSmilingProbability());
         Log.d(LOG_TAG, "whichEmoji: leftEyeOpenProb = "
@@ -136,7 +136,8 @@ class Emojifier {
         // Log the chosen Emoji
         Log.d(LOG_TAG, "whichEmoji: " + emoji.name());
 
-        // TODO (2): Have the method return the selected Emoji type.
+        // COMPLETED (2): Have the method return the selected Emoji type.
+        return emoji;
     }
 
     // TODO (6) Create a method called addBitmapToFace() which takes the background bitmap, the Emoji bitmap, and a Face object as arguments and returns the combined bitmap with the Emoji over the face.
