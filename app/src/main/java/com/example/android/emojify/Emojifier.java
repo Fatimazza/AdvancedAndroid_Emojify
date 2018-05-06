@@ -62,7 +62,10 @@ class Emojifier {
         // Log the number of faces
         Log.d(LOG_TAG, "detectFacesAndOverlayEmoji: number of faces = " + faces.size());
 
-        // TODO (7): Create a variable called resultBitmap and initialize it to the original picture bitmap passed into the detectFacesAndOverlayEmoji() method
+        // COMPLETED (7): Create a variable called resultBitmap and initialize it to the original picture bitmap passed into the detectFacesAndOverlayEmoji() method
+        // Initialize result bitmap to original picture
+        Bitmap resultBitmap = picture;
+
         // If there are no faces detected, show a Toast message
         if(faces.size() == 0) {
             Toast.makeText(context, R.string.no_faces_message, Toast.LENGTH_SHORT).show();
@@ -115,7 +118,12 @@ class Emojifier {
                         Toast.makeText(context, R.string.no_emoji, Toast.LENGTH_SHORT).show();
                 }
 
-                // TODO (8): Call addBitmapToFace(), passing in the resultBitmap, the emojiBitmap and the Face  object, and assigning the result to resultBitmap
+                // COMPLETED (8): Call addBitmapToFace(),
+                // passing in the resultBitmap, the emojiBitmap and the Face  object,
+                // and assigning the result to resultBitmap
+
+                // Add the emojiBitmap to the proper position in the original image
+                resultBitmap = addBitmapToFace(resultBitmap, emojiBitmap, face);
 
             }
         }
