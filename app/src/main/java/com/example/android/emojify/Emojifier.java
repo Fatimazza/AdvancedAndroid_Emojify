@@ -43,7 +43,7 @@ class Emojifier {
      * @param context The application context.
      * @param picture The picture in which to detect the faces.
      */
-    static void detectFacesAndOverlayEmoji(Context context, Bitmap picture) {
+    static Bitmap detectFacesAndOverlayEmoji(Context context, Bitmap picture) {
 
         // COMPLETED (3): Change the name of the detectFaces() method to detectFacesAndOverlayEmoji() and the return type from void to Bitmap
 
@@ -128,10 +128,11 @@ class Emojifier {
             }
         }
 
-
         // Release the detector
         detector.release();
-        // TODO (9): Return the resultBitmap
+
+        // COMPLETED (9): Return the resultBitmap
+        return resultBitmap;
     }
 
 
