@@ -39,23 +39,34 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.IOException;
 
+import butterknife.BindView;
+
 public class MainActivity extends AppCompatActivity {
 
-    // TODO (2): Replace all View declarations with Butterknife annotations
+    // COMPLETED (2): Replace all View declarations with Butterknife annotations
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int REQUEST_STORAGE_PERMISSION = 1;
 
     private static final String FILE_PROVIDER_AUTHORITY = "com.example.android.fileprovider";
 
-    private ImageView mImageView;
+    @BindView(R.id.image_view)
+    ImageView mImageView;
 
-    private Button mEmojifyButton;
-    private FloatingActionButton mShareFab;
-    private FloatingActionButton mSaveFab;
-    private FloatingActionButton mClearFab;
+    @BindView(R.id.emojify_button)
+    Button mEmojifyButton;
 
-    private TextView mTitleTextView;
+    @BindView(R.id.share_button)
+    FloatingActionButton mShareFab;
+
+    @BindView(R.id.save_button)
+    FloatingActionButton mSaveFab;
+
+    @BindView(R.id.clear_button)
+    FloatingActionButton mClearFab;
+
+    @BindView(R.id.title_text_view)
+    TextView mTitleTextView;
 
     private String mTempPhotoPath;
 
